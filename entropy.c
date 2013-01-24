@@ -13,7 +13,7 @@ float entropyCompute_Bool(const bool* classvar, int n)
     
     int i; // just for loop
     
-    printf("Compute entropy for boolean dataset:");
+    printf("Compute entropy for boolean dataset:\n");
     for(i=0; i<n; i++)
     {
         printf("%d ", classvar[i]);

@@ -38,7 +38,7 @@ int main()
     }
     float l_fEntropy = entropyCompute_Bool(l_pbClassVar, 14);
     
-    printf("Entropy: %0.2f\n", l_fEntropy);
+    printf("Entropy: %f\n", l_fEntropy);
 
     return 0;
 }

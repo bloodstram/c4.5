@@ -1,4 +1,4 @@
-#include "entropy.h"
+#include "c4_5.h"
 
 /*compute the entropy of a class variable*/
 

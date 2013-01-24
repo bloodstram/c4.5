@@ -1,4 +1,4 @@
-#include "entropy.h"
+#include "c4_5.h"
 
 enum Outlook_t {SUNNY, OVERCAST, RAINY};
 

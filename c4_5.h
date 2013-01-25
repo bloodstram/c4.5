@@ -16,7 +16,10 @@ struct PlayGolf
     bool m_bPlay;
 };
 
-float entropyCompute_Bool(const bool* classvar, int n);
+float entropyCompute_Bool(const bool* var, int n);
+float entropyCompute_Catg(const int* var, int n);
+float entropyCompute_Num(const float* var, int n);
+
 float gainCompute_Bool(struct PlayGolf* dataset, int n);
 
 #endif

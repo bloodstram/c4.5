@@ -19,4 +19,4 @@ struct PlayGolf
 float entropyCompute_Bool(const bool* classvar, int n);
 float gainCompute_Bool(struct PlayGolf* dataset, int n);
 
-#endif C4_5
+#endif

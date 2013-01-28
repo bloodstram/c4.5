@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct MyLinkNode
 {
@@ -7,5 +8,5 @@ typedef struct MyLinkNode
 }mylinknode_t;
 
 int linkedListLen(mylinknode_t* a_pHead);
-bool nodeAdd(mylinknode_t* a_pHead, mylinknode_t* a_pNew);
-bool nodeRemove(mylinknode_t* a_pHead, mylinknode_t* a_pRemove);
+void nodeAdd(mylinknode_t* a_pHead, mylinknode_t* a_pNew);
+void nodeRemove(mylinknode_t* a_pHead, mylinknode_t* a_pRemove);

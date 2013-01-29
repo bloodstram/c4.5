@@ -19,13 +19,24 @@ int main()
                                      {RAINY, 71, 80, true, false}};
     
     
-    bool l_pbClassVar[14];
+    float l_fEntropy = 0.0f;
     int i;
+    
+    //for bool variable
+/*    bool l_pbClassVar[14];*/
+/*    for(i=0; i<14; i++)*/
+/*    {*/
+/*        l_pbClassVar[i] = l_psDataset[i].m_bPlay;*/
+/*    }*/
+/*    l_fEntropy = entropyCompute_Bool(l_pbClassVar, 14);*/
+
+    //for categorical variable
+    int l_pOutlook[14];
     for(i=0; i<14; i++)
     {
-        l_pbClassVar[i] = l_psDataset[i].m_bPlay;
+        l_pOutlook[i] = l_psDataset[i].m_eOutlook;
     }
-    float l_fEntropy = entropyCompute_Bool(l_pbClassVar, 14);
+    l_fEntropy = entropyCompute_Catg(l_pOutlook, 14);
     
     printf("Entropy: %f\n", l_fEntropy);
 

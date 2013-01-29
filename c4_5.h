@@ -5,6 +5,8 @@
 #include <stdbool.h>
 #include <math.h>
 
+#include "mylinkedlist.h"
+
 enum Outlook_t {SUNNY, OVERCAST, RAINY};
 
 struct PlayGolf

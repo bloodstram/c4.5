@@ -106,3 +106,30 @@ float entropyCompute_Catg(const int* var, int n)
     
     return l_fEntropy;
 }
+
+//function: compute entropy for the dataset of numerical type
+//variable:
+//  var - dataset array
+//  n - length of var
+//  threshold - to divide dataset into two part(>=threshold and <threshold)
+float entropyCompute_Num(const float* var, int n, float threshold)
+{
+    float l_fEntropy = 0.0f;
+    int i;
+    
+    int l_iUnderThr = 0;
+    for(i=0; i<n; i++)
+    {
+        if(var[i] < threshold)
+        {
+            l_iUnderThr++;
+        }
+    }
+    
+    float l_fP[2];
+    l_fP[0] = (float)l_iUnderThr / (float)n;
+    l_fP[1] = (float)(n - l_iUnderThr) / (float)n;
+    l_fEntropy = -l_fP[0]*log2(l_fP[0]) - l_fP[1]*log2(l_fP[1]);
+    
+    return l_fEntropy;
+}

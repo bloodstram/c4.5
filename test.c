@@ -31,14 +31,23 @@ int main()
 /*    l_fEntropy = entropyCompute_Bool(l_pbClassVar, 14);*/
 
     //for categorical variable
-    int l_pOutlook[14];
+/*    int l_pOutlook[14];*/
+/*    for(i=0; i<14; i++)*/
+/*    {*/
+/*        l_pOutlook[i] = l_psDataset[i].m_eOutlook;*/
+/*    }*/
+/*    l_fEntropy = entropyCompute_Catg(l_pOutlook, 14);*/
+/*    */
+
+    //for numerical variable
+    float l_pfTemperature[14];
     for(i=0; i<14; i++)
     {
-        l_pOutlook[i] = l_psDataset[i].m_eOutlook;
+        l_pfTemperature[i] = l_psDataset[i].m_iTemp;
     }
-    l_fEntropy = entropyCompute_Catg(l_pOutlook, 14);
-    
-    printf("Entropy: %f\n", l_fEntropy);
+    l_fEntropy = entropyCompute_Num(l_pfTemperature, 14, 70.0f);
 
+    printf("Entropy: %f\n", l_fEntropy);
+    
     return 0;
 }

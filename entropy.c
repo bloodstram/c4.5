@@ -3,7 +3,7 @@
 /*compute the entropy of a dataset*/
 
 //function: compute entropy for the dataset of bool type
-//variable:
+//arguments:
 //  var - dataset array
 //  n - length of var
 float entropyCompute_Bool(const bool* var, int n)
@@ -13,12 +13,12 @@ float entropyCompute_Bool(const bool* var, int n)
     
     int i; // just for loop
     
-    printf("Compute entropy for boolean dataset:\n");
-    for(i=0; i<n; i++)
-    {
-        printf("%d ", var[i]);
-    }
-    printf("\n");
+/*    printf("Compute entropy for boolean dataset:\n");*/
+/*    for(i=0; i<n; i++)*/
+/*    {*/
+/*        printf("%d ", var[i]);*/
+/*    }*/
+/*    printf("\n");*/
     
     int l_iTrue = 0;
     for(i=0; i<n; i++)
@@ -41,7 +41,7 @@ float entropyCompute_Bool(const bool* var, int n)
 }
 
 //function: compute entropy for the dataset of categorical type
-//variable:
+//arguments:
 //  var - dataset array
 //  n - length of var
 float entropyCompute_Catg(const int* var, int n)
@@ -108,7 +108,7 @@ float entropyCompute_Catg(const int* var, int n)
 }
 
 //function: compute entropy for the dataset of numerical type
-//variable:
+//arguments:
 //  var - dataset array
 //  n - length of var
 //  threshold - to divide dataset into two part(>=threshold and <threshold)

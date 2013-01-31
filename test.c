@@ -40,14 +40,28 @@ int main()
 /*    */
 
     //for numerical variable
-    float l_pfTemperature[14];
+/*    float l_pfTemperature[14];*/
+/*    for(i=0; i<14; i++)*/
+/*    {*/
+/*        l_pfTemperature[i] = l_psDataset[i].m_iTemp;*/
+/*    }*/
+/*    l_fEntropy = entropyCompute_Num(l_pfTemperature, 14, 70.0f);*/
+
+/*    printf("Entropy: %f\n", l_fEntropy);*/
+
+    bool l_pbClassVar[14];
     for(i=0; i<14; i++)
     {
-        l_pfTemperature[i] = l_psDataset[i].m_iTemp;
+        l_pbClassVar[i] = l_psDataset[i].m_bPlay;
     }
-    l_fEntropy = entropyCompute_Num(l_pfTemperature, 14, 70.0f);
-
-    printf("Entropy: %f\n", l_fEntropy);
+    bool l_pbWindy[14];
+    for(i=0; i<14; i++)
+    {
+        l_pbWindy[i] = l_psDataset[i].m_bWindy;
+    }
+    float l_fGain = gainCompute_Bool(l_pbWindy, l_pbClassVar, 14);
+    
+    printf("Gain of Windy: %f\n", l_fGain);
     
     return 0;
 }

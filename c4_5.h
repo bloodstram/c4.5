@@ -22,6 +22,8 @@ float entropyCompute_Bool(const bool* var, int n);
 float entropyCompute_Catg(const int* var, int n);
 float entropyCompute_Num(const float* var, int n, float threshold);
 
-float gainCompute_Bool(struct PlayGolf* dataset, int n);
+float gainCompute_Bool(const bool* attribvar, const bool* classvar, int n);
+float gainCompute_Catg(const int* attribvar, const bool* classvar, int n);
+float gainCompute_Num(const float* attribvar, const bool* classvar, int n);
 
 #endif
